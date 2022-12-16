@@ -15,7 +15,7 @@ const Photos = () => {
       method: "DELETE",
     })
     .then(() => {
-      setPhotos(photos.filter(photo => photo.id != id));
+      setPhotos(photos.filter(photo => photo.id !== id));
     })
   };
 
@@ -46,6 +46,8 @@ const Photos = () => {
     })
 
   }, []);
+
+  setError(null);
 
   if (error) return <h1 style={{ width: "100%", textAlign: "center", marginTop: "20px" }} >Error!</h1>;
 
