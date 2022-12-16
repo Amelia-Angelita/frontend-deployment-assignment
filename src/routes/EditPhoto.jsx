@@ -43,6 +43,8 @@ const EditPhoto = () => {
 
   }, [id]);
 
+  setError(null);
+
   if (error) return <div>Error!</div>;
 
   return (
